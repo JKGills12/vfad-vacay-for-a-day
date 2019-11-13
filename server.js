@@ -1,6 +1,7 @@
 // Importing modules
 const mongoose = require("mongoose");
 const express = require("express");
+const path = require("path");
 
 // imports from orginal vfad repo
 const upload = require('./client/server/upload')
@@ -79,6 +80,9 @@ const hostSchema = new Schema({
 const Host = mongoose.model("Host", hostSchema);
 //===============================================================================
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
 
 
 /* PASSPORT LOCAL AUTHENTICATION */
@@ -155,7 +159,9 @@ app.use(cors(corsOptions))
 app.post('./client/server/upload')
 //===============================================
 
-
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/public/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log('Server started on ' + PORT)
