@@ -13,6 +13,17 @@ const PORT = process.env.PORT || 3001;
 // from vfad repo
 app.use(express.json())
 
+if (process.env.NODE_ENV === 'production') {
+  // Exprees will serve up production assets
+  app.use(express.static('client/build'));
+
+  // Express serve up index.html file if it doesn't recognize route
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
 /*  PASSPORT SETUP  */
 
 const passport = require('passport');
@@ -154,6 +165,12 @@ app.use(cors(corsOptions))
 // app.post('/upload', upload)
 app.post('./client/server/upload')
 //===============================================
+
+app.use(express.static(path.resolve(__dirname, "build")))
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, "build", "index.html"))
+})
 
 
 app.listen(PORT, () => {
