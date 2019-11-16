@@ -263,12 +263,14 @@ class Host extends Component {
         <Container>
           <br />
           {/* Image uploader */}
+          <h2>Upload Images:</h2>
           <div className="card">
             <img src="https://www.dehaas-immobilien.com/wp-content/uploads/2019/07/6043_01-2-1110x623.jpg" id="img-preview" />
             <label className="file-upload-container" for="file-upload">
-              Upload photo
+              <input className="file-upload" type="file" style={{ display: null }} />
             </label>
           </div>
+          <br />
         </Container>
       </Fragment>
 
