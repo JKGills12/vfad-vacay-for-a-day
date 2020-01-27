@@ -29,5 +29,5 @@ Web page deployed using Heroku.
 
 [VFAD] https://vfad2.herokuapp.com/
 
-[GitHub] https://github.com/JKGills12/vfad3
+[GitHub] https://github.com/JKGills12/vfad-vacay-for-a-day
 
