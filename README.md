@@ -2,6 +2,7 @@
 
 This web app is a full-stack app that was built to run similar to that of VRBO and AirBnB. The idea of this app is to allow users to focus more on a single day rental for spontaneous events, such as renting a backyard with beach access when all the other beaches are packed with public users, or if you just need someone's glamorous garden for a photoshoot. Users can set up an account as a renter or a rentee. The renter will have the ability to add photos and info of their properties they want to open up for rental. Where the rentee's account will allow them to setup booking for a rental.
 
+![screenshot](client/src/pages/images/vfad.jpg)
 ## Getting Started
 
 ### Prerequisites
