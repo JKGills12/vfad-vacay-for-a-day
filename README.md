@@ -18,6 +18,7 @@ This web app is a full-stack app that was built to run similar to that of VRBO a
 
 1) Clone this repo to your desktop.
 You will start out with the base code to get you up and running.
+2) NPM Install (installs packages)
 
 
 ## Directions
