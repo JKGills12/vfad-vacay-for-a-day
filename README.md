@@ -23,7 +23,7 @@ You will start out with the base code to get you up and running.
 Either create an account as a renter or rentee. Once account created, input information of property if renter; input search preferences for properties if a rentee. 
 
 ## Deployment
-Web page deployed using Github pages (found in the Settings tab).
+Web page deployed using Heroku.
 
 [VFAD] https://vfad2.herokuapp.com/
 
